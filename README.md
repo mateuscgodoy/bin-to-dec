@@ -12,6 +12,11 @@ A application that converts binary numbers into they decimal version, and also t
 
 ## Requirements
 
+### 🧱 Constraints
+
+* Arrays may **NOT** be used to contain the binary digits entered by the user
+* Determining the decimal equivalent of a particular binary digit in the sequence must be calculated using a single mathematical function, for example the natural logarithm.
+
 ### 💼 Mandatory Features
 
 - [ ] Users may enter up to 8 binary digits in one input field.

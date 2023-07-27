@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Binary to Decimal Converter',
-  description: 'An simple web app to convert binary numbers into decimal ones, and vice-versa',
+  description: 'A simple web app to convert binary numbers into decimal ones, and vice-versa',
 }
 
 export default function RootLayout({
@@ -13,7 +13,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className='bg-neutral-200'>
+        {children}
+      </body>
     </html>
   )
 }
