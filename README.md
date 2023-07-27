@@ -1,34 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Binary To Decimal Converter
 
-## Getting Started
+## Description
 
-First, run the development server:
+A application that converts binary numbers into they decimal version, and also the opposite, decimal numbers into binaries. The idea came from a lovely GitHub repository called `app-ideas` and can be found here:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### [🔗 GitHub Repository](https://github.com/mateuscgodoy/app-ideas/blob/master/Projects/1-Beginner/Bin2Dec-App.md) 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Difficulty Level
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#### 🟢 Beginner
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Requirements
 
-## Learn More
+### 💼 Mandatory Features
 
-To learn more about Next.js, take a look at the following resources:
+- [ ] Users may enter up to 8 binary digits in one input field.
+- [ ] Users must be notified if anything other than a 0 and 1 was entered.
+- [ ] Print the result in a single output field containing the decimal number that was entered.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### ⭐ Extra Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [ ] Add a Decimal to Binary mode that may be accessed with a switch button.
+- [ ] Users may add more than a single binary/decimal number at once.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+---
