@@ -15,7 +15,13 @@ export default function InputField(
   return(
     <>
       <label htmlFor={inputId} className='self-start'>{labelText} </label>
-      <input type="text" name={inputId} id={inputId} placeholder={placeholderText} />
+      <input 
+        type="text" 
+        name={inputId} 
+        id={inputId} 
+        placeholder={placeholderText} 
+        disabled={disabled}
+        />
     </>
   )
 }
