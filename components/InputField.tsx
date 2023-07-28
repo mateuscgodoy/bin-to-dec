@@ -9,7 +9,7 @@ type Props = {
 export default function InputField(
  {converterType}: Props
 ) {
-  const {labelText, placeholder, disabled, inputId } = converterType;
+  const {labelText, placeholder, disabled, inputId, pattern } = converterType;
   const placeholderText = (!disabled && placeholder) ? placeholder : "";
 
   return(
@@ -21,6 +21,8 @@ export default function InputField(
         id={inputId} 
         placeholder={placeholderText} 
         disabled={disabled}
+        required={!disabled}
+        pattern={pattern}
         />
     </>
   )

@@ -1,7 +1,7 @@
 "use client";
 
 import { HiSwitchVertical } from 'react-icons/hi';
-import { MouseEventHandler, useState } from 'react';
+import { FormEventHandler, MouseEventHandler, useState } from 'react';
 
 import { Binary, Decimal } from '@/types';
 import InputField from '@/components/InputField';
@@ -20,10 +20,15 @@ export default function ConverterForm() {
 
     setBinToDec(prev => !prev);
   }
+
+  const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
+    e.preventDefault();
+    console.log('Success!');
+  }
   
   return (
-    <form action="" className="flex flex-col items-center">
-      <div className={`${binToDec ?"order-first" : "order-3"} flex flex-col`}>
+    <form action="" className="flex flex-col items-center" onSubmit={handleSubmit}>
+      <div className={`${binToDec ? "order-first" : "order-3"} flex flex-col`}>
         <InputField converterType={Binary} />
       </div>
       
