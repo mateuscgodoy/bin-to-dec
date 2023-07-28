@@ -1,13 +1,16 @@
 "use client";
 
 import { InputField } from "@/types";
+import { ChangeEventHandler } from "react";
 
 type Props = {
   converterType: InputField;
+  value: string,
+  onChange: ChangeEventHandler<HTMLInputElement>
 }
 
 export default function InputField(
- {converterType}: Props
+ {converterType, onChange, value}: Props
 ) {
   const {labelText, placeholder, disabled, inputId, pattern } = converterType;
   const placeholderText = (!disabled && placeholder) ? placeholder : "";
@@ -23,6 +26,8 @@ export default function InputField(
         disabled={disabled}
         required={!disabled}
         pattern={pattern}
+        onChange={onChange}
+        value={value}
         />
     </>
   )
