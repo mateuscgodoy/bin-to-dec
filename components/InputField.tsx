@@ -17,7 +17,7 @@ export default function InputField(
 
   return(
     <>
-      <label htmlFor={inputId} className='self-start'>{labelText} </label>
+      <label htmlFor={inputId} className='self-start mb-1'>{labelText} </label>
       <input 
         type="text" 
         name={inputId} 
@@ -28,6 +28,9 @@ export default function InputField(
         pattern={pattern}
         onChange={onChange}
         value={value}
+        className={`p-2 bg-neutral-200 ${!disabled ? 
+          "transition duration-1000 focus:bg-neutral-300 dark:focus:bg-neutral-900" : "cursor-not-allowed"} 
+        rounded-md font-semibold text-lg focus:outline-none focus:ring focus:ring-lime-500 dark:bg-neutral-800`}
         />
     </>
   )

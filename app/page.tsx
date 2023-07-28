@@ -5,17 +5,18 @@ export default function Home() {
     <main>
       <article className="sm:w-1/2 w-2/3 mx-auto flex flex-col items-center ">
         <section className="mt-20 mb-10 text-center">
-          <h1 className="text-4xl font-bold">
+          <h1 className="text-4xl font-bold mb-1">
             Binary to Decimal Converter
           </h1>
-          <p className="text-lg text-neutral-600">
+          <p className="text-lg text-neutral-600 dark:text-neutral-400">
             Your trustworthy converter for binary numbers.
           </p>
         </section>
-        <section>
-          <div className="border-4 border-lime-500 rounded-md p-12 bg-neutral-100 shadow-md text-center">
+        <section className="border-4 border-lime-500 rounded-md p-12 
+        bg-neutral-100 shadow-md text-center dark:bg-neutral-700">
             <h2 className="text-2xl font-semibold mb-5">Binary to Decimal</h2>
             <ConverterForm />
+          <div >
           </div>
         </section>
       </article>

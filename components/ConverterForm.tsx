@@ -16,7 +16,7 @@ export default function ConverterForm() {
   Binary.disabled = !binToDec;
   Decimal.disabled = binToDec;
 
-  useSwitchMode(binToDec);
+  // useSwitchMode(binToDec);
 
   const handleBinChange: ChangeEventHandler<HTMLInputElement> = (e) => {
     setBinValue(e.target.value);
@@ -32,6 +32,8 @@ export default function ConverterForm() {
     setBinToDec(prev => !prev);
     setDecValue("");
     setBinValue("");
+    Binary.disabled = !binToDec;
+    Decimal.disabled = binToDec;
   }
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
@@ -52,10 +54,10 @@ export default function ConverterForm() {
       
       
       <button className='bg-lime-500 font-semibold p-2 rounded-md 
-      hover:bg-lime-400 my-4 order-2'
+      hover:bg-lime-400 my-4 order-2 text-black transition duration-500 hover:scale-105'
         onClick={handleSwitchMode}
       >
-        <HiSwitchVertical />
+        <HiSwitchVertical size={20}  />
       </button>
       
       
@@ -66,7 +68,8 @@ export default function ConverterForm() {
         <button 
           type="submit" 
           className="w-[250px] bg-lime-500 font-semibold py-2 rounded-md 
-          hover:bg-lime-400 mt-5 order-last"
+          hover:bg-lime-400 mt-5 order-last text-black text-lg 
+          transition duration-500 hover:scale-105"
         >
           Convert
         </button>

@@ -7,7 +7,7 @@ export type InputField = {
 }
 
 export const Binary: InputField = {
-  labelText: "Binary:",
+  labelText: "Binary",
   inputId: "binary",
   placeholder: "e.g. 0101001",
   disabled: false,
@@ -15,7 +15,7 @@ export const Binary: InputField = {
 }
 
 export const Decimal: InputField = {
-  labelText: "Decimal:",
+  labelText: "Decimal",
   inputId: "decimal",
   placeholder: "e.g. 524",
   disabled: false,
