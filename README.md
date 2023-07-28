@@ -28,5 +28,18 @@ A application that converts binary numbers into they decimal version, and also t
 - [x] Add a Decimal to Binary mode that may be accessed with a switch button.
 - [ ] Users may add more than a single binary/decimal number at once.
 
+
+## Final Version
+
+After concluding the project, the last Extra Feature was left over since it requires a complete work around to implement it that it is just not that useful. Since the current stable version looks pleasant and it's properly working, it's time to move on to the next project!
+
+|☀️ Light Mode | 🌙 Dark Mode|
+|---|---|
+|![Light Mode Style](/public/images/light-mode.png)|![Dark Mode Style](/public/images/dark-mode.png)|
+
+Thank you for checking this project out!
+
+Hugs from Brazil 🇧🇷 😊
+
 ---
 ---

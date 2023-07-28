@@ -1,12 +1,15 @@
 "use client";
 
 import { HiSwitchVertical } from 'react-icons/hi';
+import {LuBinary} from 'react-icons/lu';
+import {TbNumbers} from 'react-icons/tb';
+import {FaArrowRightLong} from 'react-icons/fa6';
+
 import { ChangeEventHandler, FormEventHandler, MouseEventHandler, useState } from 'react';
 
 import { Binary, Decimal } from '@/types';
 import { binaryToDecimal, decimalToBinary } from '@/utils/converter';
 import InputField from '@/components/InputField';
-import useSwitchMode from '@/hooks/useSwitchMode';
 
 export default function ConverterForm() {
   const [binToDec, setBinToDec] = useState(true);
@@ -15,8 +18,6 @@ export default function ConverterForm() {
 
   Binary.disabled = !binToDec;
   Decimal.disabled = binToDec;
-
-  // useSwitchMode(binToDec);
 
   const handleBinChange: ChangeEventHandler<HTMLInputElement> = (e) => {
     setBinValue(e.target.value);
@@ -47,33 +48,40 @@ export default function ConverterForm() {
   }
   
   return (
-    <form action="" className="flex flex-col items-center" onSubmit={handleSubmit}>
-      <div className={`${binToDec ? "order-first" : "order-3"} flex flex-col`}>
-        <InputField converterType={Binary} value={binValue} onChange={handleBinChange} />
-      </div>
-      
-      
-      <button className='bg-lime-500 font-semibold p-2 rounded-md 
-      hover:bg-lime-400 my-4 order-2 text-black transition duration-500 hover:scale-105'
-        onClick={handleSwitchMode}
-      >
-        <HiSwitchVertical size={20}  />
-      </button>
-      
-      
-      <div className={`${!binToDec ? "order-first" : "order-3"} flex flex-col`}>
-        <InputField converterType={Decimal} value={decValue} onChange={handleDecChange}/>
-      </div>
-      
-        <button 
-          type="submit" 
-          className="w-[250px] bg-lime-500 font-semibold py-2 rounded-md 
-          hover:bg-lime-400 mt-5 order-last text-black text-lg 
-          transition duration-500 hover:scale-105"
+    <>
+      <h2 className="text-2xl font-semibold mb-5 flex gap-x-4 justify-center items-center">
+      {binToDec ? <LuBinary size={32}/> : <TbNumbers size={32}/>} 
+      <span className='text-lime-500'><FaArrowRightLong size={24} /> </span>
+      {binToDec ? <TbNumbers size={32} /> : <LuBinary size={32} />}
+      </h2>
+      <form action="" className="flex flex-col items-center" onSubmit={handleSubmit}>
+        <div className={`${binToDec ? "order-first" : "order-3"} flex flex-col w-4/5`}>
+          <InputField converterType={Binary} value={binValue} onChange={handleBinChange} />
+        </div>
+        
+        
+        <button className='bg-lime-500 font-semibold p-2 rounded-md 
+        hover:bg-lime-400 mt-4 mb-2 order-2 text-black transition duration-500 hover:scale-105'
+          onClick={handleSwitchMode}
         >
-          Convert
+          <HiSwitchVertical size={20}  />
         </button>
-      
-    </form>
+        
+        
+        <div className={`${!binToDec ? "order-first" : "order-3"} flex flex-col w-4/5`}>
+          <InputField converterType={Decimal} value={decValue} onChange={handleDecChange}/>
+        </div>
+        
+          <button 
+            type="submit" 
+            className="w-[250px] bg-lime-500 font-semibold py-2 rounded-md 
+            hover:bg-lime-400 mt-5 order-last text-black text-lg 
+            transition duration-500 hover:scale-105"
+          >
+            Convert
+          </button>
+        
+      </form>
+    </>
   )
 }

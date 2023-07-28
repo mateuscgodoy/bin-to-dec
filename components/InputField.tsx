@@ -30,7 +30,8 @@ export default function InputField(
         value={value}
         className={`p-2 bg-neutral-200 ${!disabled ? 
           "transition duration-1000 focus:bg-neutral-300 dark:focus:bg-neutral-900" : "cursor-not-allowed"} 
-        rounded-md font-semibold text-lg focus:outline-none focus:ring focus:ring-lime-500 dark:bg-neutral-800`}
+        rounded-md font-semibold text-lg focus:outline-none focus:ring focus:ring-lime-500 dark:bg-neutral-800
+        w-full`}
         />
     </>
   )

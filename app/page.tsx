@@ -12,9 +12,8 @@ export default function Home() {
             Your trustworthy converter for binary numbers.
           </p>
         </section>
-        <section className="border-4 border-lime-500 rounded-md p-12 
+        <section className="border-4 border-lime-500 rounded-md w-[400px] py-8
         bg-neutral-100 shadow-md text-center dark:bg-neutral-700">
-            <h2 className="text-2xl font-semibold mb-5">Binary to Decimal</h2>
             <ConverterForm />
           <div >
           </div>
