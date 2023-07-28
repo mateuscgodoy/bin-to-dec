@@ -4,6 +4,7 @@ import { HiSwitchVertical } from 'react-icons/hi';
 import { ChangeEventHandler, FormEventHandler, MouseEventHandler, useState } from 'react';
 
 import { Binary, Decimal } from '@/types';
+import { binaryToDecimal, decimalToBinary } from '@/utils/converter';
 import InputField from '@/components/InputField';
 import useSwitchMode from '@/hooks/useSwitchMode';
 
@@ -36,6 +37,11 @@ export default function ConverterForm() {
   const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
     console.log('Success!');
+    if(binToDec) {
+      setDecValue(binaryToDecimal(binValue).toString());
+    } else {
+      setBinValue(decimalToBinary(decValue).toString());
+    }
   }
   
   return (
